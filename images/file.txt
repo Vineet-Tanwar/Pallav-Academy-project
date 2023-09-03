@@ -1,0 +1,3 @@
+Vineet,21,vineet@gmail.com,Male,student,yes
+adf,sdf,afdafdsdf,Male,student,no
+sda,asd,asfd,Male,student,no
