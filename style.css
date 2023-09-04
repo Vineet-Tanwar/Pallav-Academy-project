@@ -11,6 +11,7 @@ html{
 body{
     background: #373737;
     color: beige;
+    
 }
 
 #header{
@@ -20,6 +21,26 @@ body{
     background-size: cover;
     background-position: center;
 }
+
+@keyframes slideInLeft{
+    from {
+        transform: translateX(-500px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.animation{
+    animation-name: slideInLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+}
+
 
 .container{
     padding: 10px 10%;
@@ -104,6 +125,19 @@ nav ul li a:hover::after{
 .about-col-1 img{
     width: 100%;
     border-radius: 15px;
+    margin-top: -15px;
+    scale: 1.5;
+}
+
+#whyus{
+    font-size: 60px;
+    font-weight: 600;
+    color: beige;   
+    
+}
+
+#whyus span{
+    color: #76B39D;
 }
 
 .about-col-2{
@@ -111,23 +145,111 @@ nav ul li a:hover::after{
 
 }
 
+.about-col-2 p{
+    margin-top: 28px;
+    font-size: 20px;
+}
+
+/* .whyus{
+    padding-top: 20px ;
+    font-size: 28px;
+    margin-top: 14px;
+} */
+
+.pa{
+    color: #76B39D;
+    font-weight: 400;
+    transition: transform 0.5s;
+}
+
+.pa:hover{
+    transform: translateY(-10px);
+    
+}
+
+.tab-contents{
+    font-size: 18px;
+    padding-bottom: 65px;
+}
+
+.tab-contents span{
+    font-weight: 600;
+}
+
+.about-col-2 p{
+    font-size: 18px;
+    margin-top: 40px;
+    
+}
+
+
+#vibee {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    align-items: center; /* Vertically center the items */
+    gap: 20px; /* Adjust the gap between the columns */
+}
+  
+.container2 {
+    margin-left: 20%;
+    padding: 10px;
+    
+
+    /* Styles for the text container */
+}
+  
+.subtitle {
+    font-size: 24px; /* Adjust font size as needed */
+    margin: 0; /* Remove default margin */
+}
+  
+.video {
+    max-width: 50%; /* Ensure the video doesn't exceed its container's width */
+    margin-left: 25%;
+    border-radius: 15px;
+    transition: transform 0.5s ;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+.forvid{
+    background: #262626;
+    max-width: 100%;
+    margin-right: 150px;
+    border-radius: 15px;
+    
+}
+
+.video:hover{
+    transform: translateY(-10px);
+}
+  
+
+
 .subtitle{
     font-size: 60px;
     font-weight: 600;
     color: beige;
 }
+.subtitle span{
+    color: #76B39D;
+}
 
 .tab-titles{
     display: flex;
-    margin: 20px 0 40px;
+    margin: 20px 0 20px;
 
 }
 
 .tab-links{
     margin-right: 50px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     cursor: pointer;
+    position: relative;
 
 
 }
@@ -138,15 +260,17 @@ nav ul li a:hover::after{
     height: 3px;
     background: #76B39D;
     position: absolute;
+    bottom: 0;
     left: 0;
+    transform-origin: bottom center;
     bottom: -8px;
-    transition: 0.5s;
+    transition: 0.5s ease;
 
 }
 
 .tab-links.active-link::after{
     width: 50%;
-    position: relative;
+    position: absolute;
 
 }
 
@@ -156,11 +280,12 @@ nav ul li a:hover::after{
 
 
 
+
 }
 
 .tab-contents ul li span{
     color: #76B39D;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .tab-contents{
@@ -170,7 +295,12 @@ nav ul li a:hover::after{
 .tab-contents.active-tab{
     display: block;
 }
+/* -------------------video------------------------------------- */
 
+
+.videosub{
+    font-size: 18px;
+}
 /* ---------------------SERVICES--------------------- */
 #services{
     padding: 30px 0;
@@ -182,6 +312,11 @@ nav ul li a:hover::after{
     grid-gap:40px;
     margin-top: 50px;
 
+}
+
+.services-list video{
+    width: 100%;
+    height: 50vh;
 }
 .services-list div{
     background: #262626;
@@ -195,6 +330,7 @@ nav ul li a:hover::after{
 .services-list div i{
     font-size: 50px;
     margin-bottom: 30px;
+    margin-top: 20px;
 }
 
 .services-list div h2{
@@ -216,6 +352,13 @@ nav ul li a:hover::after{
     background: #76B39D;
     transform: translateY(-10px);
 
+}
+
+.services-list img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
 }
 
 /* --------------portfolio------------- */
@@ -457,7 +600,7 @@ nav .fa-solid{
 
     
 
-    .subtitle{
+    .subtitle , #whyus{
         font-size: 40px;
 
     }
@@ -495,3 +638,5 @@ nav .fa-solid{
     display: block;
 
 }
+
+
